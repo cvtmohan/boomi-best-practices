@@ -66,9 +66,7 @@ While performing this activity, if there's more than 1 connector present in the 
 
 :point_right: When opening a **component or configuration** with intention to only **view** the same, then don't click the "OK" or "Save" button when exiting them, instead use the "Cancel" or "X" button to exit them. This will ensure that you aren't accidentally saving any component/configuration.
 
-:point_right: Plan for **Load Testing**, preferably in a dedicated Load Testing environment, for the integrations where high data volume is expected.
-
-:point_right: Baseline and benchmark process execution latency, payload parsing efficiency, and infrastructure constraints. Monitor Atom/Molecule heap memory utilization, concurrent thread limits, and Atom Worker scaling behaviors under various payload structures (e.g., deep XML/JSON vs. flat files).
+:point_right: Plan for **Load Testing**, preferably in a dedicated Load Testing environment, for the integrations where high data volume is expected. Furthermore, baseline and benchmark process execution latency, payload parsing efficiency, and infrastructure constraints. Monitor Atom/Molecule heap memory utilization, concurrent thread limits, and Atom Worker scaling behaviors under various payload structures (e.g., deep XML/JSON vs. flat files).
 
 :point_right: Regularly audit the security posture of the entire integration flow. This includes validating third-party custom connectors for vulnerabilities, penetration testing external-facing Boomi API endpoints, and ensuring strict payload encryption (e.g., PGP) in transit. Verify that no credentials or tokens are exposed in process logs or hardcoded outside of encrypted environment extensions.
 
