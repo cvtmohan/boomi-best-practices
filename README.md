@@ -68,6 +68,10 @@ While performing this activity, if there's more than 1 connector present in the 
 
 :point_right: Plan for **Load Testing**, preferably in a dedicated Load Testing environment, for the integrations where high data volume is expected.
 
+:point_right: Baseline and benchmark process execution latency, payload parsing efficiency, and infrastructure constraints. Monitor Atom/Molecule heap memory utilization, concurrent thread limits, and Atom Worker scaling behaviors under various payload structures (e.g., deep XML/JSON vs. flat files).
+
+:point_right: Regularly audit the security posture of the entire integration flow. This includes validating third-party custom connectors for vulnerabilities, penetration testing external-facing Boomi API endpoints, and ensuring strict payload encryption (e.g., PGP) in transit. Verify that no credentials or tokens are exposed in process logs or hardcoded outside of encrypted environment extensions.
+
 :point_right: Consider using **Process Mode** as **Low Latency** or **Bridge** for the real-time (API based) integrations involving high data volume, provided it's okay to capture no/limited logs in Boomi. However, ensure that the required logs are captured in some boundary system.
 
 :point_right: When a Process is planned to be used as a Common Process, being called by multiple Main Processes, it's recommended to use a Process Route Shape instead of a Process Call Shape, to call that Common-Sub-Process from the Main Processes, so that we won't have to re-deploy the Main Processes whenever the Common Sub-Process is updated and re-deployed.
